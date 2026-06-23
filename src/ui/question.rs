@@ -56,7 +56,7 @@ fn render_question_content(
             Constraint::Length(3), // Question title
             Constraint::Length(1), // Hint for multiple answers
             Constraint::Min(5),    // Options
-            Constraint::Length(3), // Confirm button
+            Constraint::Length(1), // Confirm button
             Constraint::Length(2), // Feedback area
         ])
         .split(area);

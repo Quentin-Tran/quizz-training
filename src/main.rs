@@ -69,7 +69,10 @@ fn main() -> Result<()> {
 }
 
 /// Main application loop
-fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>, app: &mut App) -> Result<()> {
+fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>, app: &mut App) -> Result<()>
+where
+    B::Error: Send + Sync + 'static,
+{
     loop {
         // Render the current state
         terminal.draw(|frame| ui::render(frame, app))?;

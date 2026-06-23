@@ -1,0 +1,178 @@
+metadata:
+  name: "Develop AI apps and agents on Azure (AI-103)"
+
+questions:
+  - title: "Which web portal should you use to work with assets in a Microsoft Foundry project?"
+    options:
+      - The Azure portal
+      - Microsoft Copilot
+      - The Microsoft Foundry portal*
+  - title: "Which component of Microsoft Foundry provides pre-built services for common AI tasks?"
+    options:
+      - Foundry Tools*
+      - Foundry Models
+      - Foundry IQ
+  - title: "Which extension should you use in Visual Studio Code to work with Foundry projects?"
+    options:
+      - Python extension for Visual Studio Code
+      - GitHub Copilot 
+      - Foundry Toolkit for Visual Studio Code*
+  - title: "Which model benchmark indicates the model's ability to process prompts and return comprehensive responses quickly?"
+    options:
+      - Quality index
+      - Cost
+      - Throughput*
+  - title: "Which deployment type in Microsoft Foundry is best for general use while offering the largest quota?"
+    options:
+      - Data Zone Batch
+      - Global Standard*
+      - Developer
+  - title: "Which evaluation metric measures linguistic correctness and natural language quality?"
+    options:
+      - Fluency*
+      - Groundedness
+      - Relevance
+  - title: "Which endpoint offers the broadest support for OpenAI APIs with Foundry Models?"
+    options:
+      - The Foundry project endpoint
+      - The Azure OpenAI endpoint*
+      - The Foundry Tools endpoint
+  - title: "Which package must you install to use the Microsoft Foundry SDK in Python?"
+    options:
+      - Package azure-foundry
+      - Package azure-ai-projects*
+      - Package microsoft-foundry-sdk
+  - title: "Which method do you use to generate responses with the Responses API?"
+    options:
+      - client.chat.completions.create()
+      - client.get_response_id()
+      - client.responses.create()*
+  - title: "Which tool should you use when a model needs to answer questions from your own uploaded policy documents?"
+    options:
+      - web_search
+      - file_search*
+      - code_interpreter
+  - title: "In a function-calling workflow, what should your application do after the model returns a function_call item?"
+    options:
+      - Wait for the model to run the function automatically
+      - Run the function in your code and send a function_call_output back to the model*
+      - Convert the function call into a web_search request
+  - title: "Which statement about the code_interpreter tool is correct?"
+    options:
+      - It can run Python code in a sandboxed runtime to help solve tasks*
+      - It can browse external websites directly during code execution
+      - It only supports file uploads and can't perform calculations
+  - title: "What is the primary purpose of a system message in a prompt?"
+    options:
+      - To define the model's role, behavior, and output constraints.*
+      - To provide training data that permanently changes the model.
+      - To retrieve data from an external data source.
+  - title: "When should you use Retrieval Augmented Generation (RAG) instead of relying on prompt engineering alone?"
+    options:
+      - When you want the model to respond in a consistent style and format.
+      - When the model needs access to domain-specific or current data that it wasn't trained on.*
+      - When you want to reduce the length of prompts sent to the model.
+  - title: "What does the temperature parameter control in a language model?"
+    options:
+      - The maximum number of tokens the model can generate.
+      - The randomness and creativity of the model's responses.*
+      - The speed at which the model processes requests.
+  - title: "What does fine-tuning optimize in a language model?"
+    options:
+      - The factual accuracy of responses by connecting to external data.
+      - The consistency of the model's behavior, style, and output format.*
+      - The number of tokens the model can process in a single request.
+  - title: "You're building a chat application that needs to answer questions using your company's product catalog while maintaining a specific brand voice. Which combination of strategies is most appropriate?"
+    options:
+      - Prompt engineering only, with detailed system messages.
+      - RAG for the product catalog data, fine-tuning for the brand voice, and prompt engineering for conversation-specific instructions.*
+      - Fine-tuning only, with the product catalog included in the training data.
+  - title: "Why should you consider creating an AI Impact Assessment when designing a generative AI solution?"
+    options:
+      - To make a legal case that indemnifies you from responsibility for harms caused by the solution
+      - To document the purpose, expected use, and potential harms for the solution*
+      - To evaluate the cost of cloud services required to implement your solution
+  - title: "What capability of Microsoft Foundry helps mitigate harmful content generation at the Safety System level?"
+    options:
+      - DALL-E model support
+      - Fine-tuning
+      - Guardrails*
+  - title: "Why should you consider a phased delivery plan for your generative AI solution?"
+    options:
+      - To enable you to gather feedback and identify issues before releasing the solution more broadly*
+      - To eliminate the need to map, measure, mitigate, and manage potential harms 
+      - To enable you to charge more for the solution
+  - title: "What is the primary benefit of using Microsoft Foundry Agent Service compared to building agents with standard APIs?"
+    options:
+      - It provides access to more powerful AI models
+      - It requires no Azure subscription
+      - It handles tool calling, state management, and infrastructure automatically*
+      - It only works with the Azure portal
+  - title: "How does Microsoft Foundry Agent Service handle conversation state?"
+    options:
+      - By requiring developers to manually manage conversation history
+      - Through external database connections
+      - Through the Responses API which automatically manages conversation context*
+      - Using local file storage on the client device
+  - title: "Which of the following is NOT a recommended security practice for AI agents?"
+    options:
+      - Using role-based access controls 
+      - Implementing prompt filtering and validation
+      - Maintaining comprehensive logging and traceability
+      - Allowing agents unrestricted access to all enterprise data*
+  - title: "What happens when an agent determines it needs a tool to respond to a user request?"
+    options:
+      - The agent asks the user for permission to use the tool
+      - The agent stops processing and waits for developer input
+      - The agent automatically invokes the tool, processes results, and incorporates them into its response*
+      - The agent sends the request to a separate processing queue
+  - title: "What are custom tools, and how can they help you develop effective agents with Microsoft Foundry Agent Service?"
+    options:
+      - Callable functions that an agent can use to extend its capabilities.*
+      - Extensions for Visual Studio Code that make it easier to create and deploy agents.
+      - Fine-tuned models that the agent can use to generate custom output.
+  - title: "You need to integrate functionality from an OpenAPI 3.0-based web service into an agent solution. What should you do?"
+    options:
+      - Add the JSON schema of the web service to the agent's instructions.
+      - Rewrite the web service as a Python function and hard-code it in your agent app.
+      - Add the web service as an OpenAPI specification tool to the agent definition*
+  - title: "Your agent application code includes a local function that you want the agent to call. What kind of tool should you add to the agent's definition?"
+    options:
+      - Function calling*
+      - Code interpreter
+      - Azure Functions
+  - title: "What role does the MCP server play in the MCP agent tool integration?"
+    options:
+      - Runs the AI agent and processes user prompts directly.
+      - Manages network connections between multiple agents.
+      - Hosts tool definitions and makes them available for discovery by the client.*
+  - title: "How does an MCP client retrieve available tools from the MCP server?"
+    options:
+      - By calling session.list_tools() to get the current tool catalog.*
+      - By reading a static JSON file from the server directory.
+      - By subscribing to server events via a WebSocket connection.
+  - title: "Why should MCP tools be wrapped in async functions on the client-side?"
+    options:
+      - To allow the agent to wait for user input.
+      - To enable asynchronous invocation so the agent can call tools without blocking.*
+      - To convert the functions into REST API endpoints automatically.
+  - title: "What is the primary advantage of Retrieval Augmented Generation (RAG) over simple AI agents?"
+    options:
+      - RAG eliminates the need for large language models by relying entirely on document retrieval.
+      - RAG enables agents to ground responses in current organizational information and provide source transparency.*
+      - RAG automatically retrains the language model whenever organizational documents change.
+  - title: "Which data source option provides real-time access to SharePoint content with Microsoft 365 governance?"
+    options:
+      - SharePoint Indexed, which pre-processes SharePoint content into Azure AI Search.
+      - SharePoint Remote, which queries SharePoint sites and libraries in real-time.*
+      - Azure Blob Storage, which connects to SharePoint files stored as blobs.
+  - title: "What is the purpose of scoring profiles in Foundry IQ knowledge bases?"
+    options:
+      - To encrypt sensitive fields and protect confidential information during retrieval.
+      - To boost specific fields or attributes so more important results surface first.*
+      - To configure how documents are chunked and embedded for semantic search.
+  - title: "Why is it critical to specify retrieval behavior in agent instructions?"
+    options:
+      - Without proper instructions, agents might answer from training data instead of the knowledge base, provide unverifiable responses, or fail to cite sources.*
+      - Instructions determine the semantic ranking algorithm that Foundry IQ applies to search results.
+      - Instructions enable the agent to automatically update knowledge base content when it detects outdated information.

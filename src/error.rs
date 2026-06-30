@@ -31,24 +31,24 @@ pub enum QuizError {
         question_index: usize,
     },
 
-    #[error("No options found for question {question_index} in file: {file}")]
+    #[error("No options found for question \"{question_title}\" in file: {file}")]
     NoOptions {
         file: PathBuf,
-        question_index: usize,
+        question_title: String,
     },
 
-    #[error("No correct answer marked for question {question_index} in file: {file}")]
+    #[error("No correct answer marked for question \"{question_title}\" in file: {file}")]
     NoCorrectAnswer {
         file: PathBuf,
-        question_index: usize,
+        question_title: String,
     },
 
     #[error(
-        "Empty option text at question {question_index}, option {option_index} in file: {file}"
+        "Empty option text at question \"{question_title}\", option {option_index} in file: {file}"
     )]
     EmptyOptionText {
         file: PathBuf,
-        question_index: usize,
+        question_title: String,
         option_index: usize,
     },
 }

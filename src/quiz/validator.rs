@@ -30,7 +30,7 @@ pub fn validate_quiz(quiz_yaml: QuizYaml, file_path: PathBuf) -> QuizResult<Quiz
         if question_yaml.options.is_empty() {
             return Err(QuizError::NoOptions {
                 file: file_path,
-                question_index: question_index + 1,
+                question_title: question_yaml.title.clone(),
             });
         }
 
@@ -51,7 +51,7 @@ pub fn validate_quiz(quiz_yaml: QuizYaml, file_path: PathBuf) -> QuizResult<Quiz
             if text.is_empty() {
                 return Err(QuizError::EmptyOptionText {
                     file: file_path,
-                    question_index: question_index + 1,
+                    question_title: question_yaml.title.clone(),
                     option_index: option_index + 1,
                 });
             }
@@ -63,7 +63,7 @@ pub fn validate_quiz(quiz_yaml: QuizYaml, file_path: PathBuf) -> QuizResult<Quiz
         if !has_correct_answer {
             return Err(QuizError::NoCorrectAnswer {
                 file: file_path,
-                question_index: question_index + 1,
+                question_title: question_yaml.title.clone(),
             });
         }
 

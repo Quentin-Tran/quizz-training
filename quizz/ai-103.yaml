@@ -176,3 +176,323 @@ questions:
       - Without proper instructions, agents might answer from training data instead of the knowledge base, provide unverifiable responses, or fail to cite sources.*
       - Instructions determine the semantic ranking algorithm that Foundry IQ applies to search results.
       - Instructions enable the agent to automatically update knowledge base content when it detects outdated information.
+  - title: "What Azure resource does the Foundry portal automatically create when you publish an agent to Microsoft Teams?"
+    options:
+      - Azure Functions
+      - Azure Bot Service*
+      - Azure Cosmos DB
+      - Azure Logic Apps
+  - title: "What is the main difference between shared scope and organization scope when publishing an agent?"
+    options:
+      - Shared scope requires more Azure resources
+      - Organization scope requires admin approval before the agent is available to all users*
+      - Shared scope only works in the Foundry playground
+      - Organization scope provides better agent performance
+  - title: "What happens to tool permissions when you publish an agent from Foundry to Teams?"
+    options:
+      - Permissions are automatically transferred to the published agent
+      - Tools are disabled after publishing
+      - The published agent gets a new identity and needs permissions reassigned*
+      - Permissions only work in organization scope
+  - title: "What is Microsoft Work IQ?"
+    options:
+      - A machine learning model for workplace analytics
+      - A CLI and MCP server that connects AI agents to Microsoft 365 data*
+      - A replacement for Microsoft Teams
+      - A Visual Studio Code extension for building agents    
+  - title: "When should you consider using the Microsoft 365 Agents Toolkit instead of direct publishing from Foundry?"
+    options:
+      - For all production deployments
+      - When you need custom SSO, middleware logic, or multi-environment deployment*
+      - When publishing to shared scope
+      - When your agent doesn't use any tools
+  - title: "Which type of node in a Foundry workflow is used to invoke an AI agent?"
+    options:
+      - Logic node
+      - Agent node*
+      - Data transformation node
+  - title: "Which node type would you use to handle multiple tickets in a workflow without duplicating nodes?"
+    options:
+      - If/Else node
+      - For-Each node*
+      - Send message node
+  - title: "Which of the following best describes how structured agent outputs are used in workflows?"
+    options:
+      - They are ignored once generated, since agents always handle routing automatically
+      - They provide predictable data that can be stored in variables, evaluated with conditions, and trigger workflow steps*
+      - They replace the need for loops and If/Else nodes
+  - title: "What are the key steps to create a Microsoft Foundry Agent using the Microsoft Agent Framework?"
+    options:
+      - Deploy a custom AI model before creating an agent definition in the Azure portal.
+      - Initialize the agent by defining a model in the AgentThread constructor.
+      - Create an AzureAIAgentClient, define a ChatAgent with instructions and tools, and create an AgentThread for conversations.*
+  - title: "Which component in the Microsoft Agent Framework manages conversation state and stores messages?"
+    options:
+      - AgentThread*
+      - ChatAgent
+      - AzureAIAgentClient
+  - title: "How do you add custom functionality to a Microsoft Foundry Agent in the Microsoft Agent Framework?"
+    options:
+      - Configure custom functions in the Azure portal and link them to the agent through connection strings.
+      - Create Python functions with proper type annotations and descriptions, then pass them to the ChatAgent's tools parameter.*
+      - Modify the AI model's architecture to integrate the custom functionality directly.
+  - title: "What's the first step in the Microsoft Agent Framework's unified orchestration workflow?"
+    options:
+      - Select and create an orchestration pattern
+      - Define your agents and describe their capabilities*
+      - Start a runtime to manage execution
+  - title: "For brainstorming and collaborative problem solving among multiple agents, which orchestration pattern is most suitable?"
+    options:
+      - Group Chat*
+      - Magentic
+      - Sequential
+  - title: "Which pattern dynamically transfers control between agents based on context or rules?"
+    options:
+      - Handoff*
+      - Concurrent
+      - Sequential
+
+
+  - title: "What is the primary role of an A2A server?"
+    options:
+      - It executes business logic for the agent directly.
+      - It routes requests between clients and connected agents.*
+      - It stores static agent responses for reuse.
+  - title: "What does the Agent Executor do in an A2A agent?"
+    options:
+      - Manages network connections between clients and servers.
+      - Processes incoming requests and generates responses or events.*   
+      - Provides a GUI for monitoring agent activity.
+  - title: "What is an agent card used for in A2A?"
+    options:
+      - It stores the agent's API key for authentication.
+      - It provides metadata about the agent, such as its capabilities and available functions.*
+      - It visualizes the agent's workflow in a GUI dashboard.
+  - title: "How should you create an application that analyzes news articles and extracts key people, places, and dates that are mentioned for indexing?"
+    options:
+      - Use a generative AI model with a custom function tool that matches strings using a regular expression.
+      - Use Azure Language in Foundry Tools to extract PII entities.
+      - Use Azure Language in Foundry Tools to extract named entities.*
+  - title: "You want to publish extracts from customer testimonials on a web site. You need to remove personal details from the text before publishing it. What should you do?"
+    options:
+      - Use Azure Language in Foundry Tools to find and redact PII entities.*
+      - Use Azure Language in Foundry Tools to detect the language and publish only the testimonials in English.
+      - Use a gpt-4.1 model to create new AI-generated customer reviews.
+
+
+  - title: "What is the primary role of the Azure Language MCP server?"
+    options:
+      - To train and fine-tune custom language models for use by AI agents.
+      - To expose Azure Language text analysis capabilities as MCP tools for agents.*
+      - To deploy and manage large language models in an Azure subscription.
+  - title: "How does an agent determine which Azure Language MCP tool to call when processing a user's prompt?"
+    options:
+      - The developer writes routing logic to direct each prompt to a specific tool.
+      - The agent matches the prompt to tool descriptions received from the MCP server.*
+      - The MCP server analyzes the prompt and automatically routes it to a tool.
+  - title: "When building a Python client application, how do you reference a Foundry agent when calling the OpenAI Responses API?"
+    options:
+      - By passing the agent's API key as a request header to the endpoint.
+      - By specifying the agent name in the agent_reference field in extra_body.*
+      - By passing the agent's endpoint URL as the model parameter value.
+  - title: "What authentication method is used when connecting the Azure Language MCP server to a Foundry agent?"
+    options:
+      - OAuth 2.0 authentication with a client certificate and tenant ID.
+      - Key-based authentication using the Ocp-Apim-Subscription-Key credential.*
+      - Anonymous access that requires no authentication or credentials.
+
+  - title: "Which model can you use to generate text from speech?"
+    options:
+      - gpt-4o-mini
+      - gpt-4o-mini-tts
+      - gpt-4o-mini-transcribe*
+  - title: "What authentication method is used when connecting the Azure Language MCP server to a Foundry agent?"
+    options:
+      - gpt-4o-mini
+      - gpt-4o-mini-tts*
+      - gpt-4o-mini-transcribe
+  - title: "What information do you need from your Microsoft Foundry resource to consume it using the Azure Speech SDK?"
+    options:
+      - The endpoint and key*
+      - The primary and secondary keys
+      - The Azure subscription ID and resource group name
+  - title: "Which object should you use to specify that the speech input to be transcribed to text is in an audio file?"
+    options:
+      - SpeechConfig
+      - AudioConfig*
+      - SpeechRecognizer
+  - title: "How can you change the voice used in speech synthesis?"
+    options:
+      - Specify a SpeechSynthesisOutputFormat enumeration in the SpeechConfig object.
+      - Set the speech_synthesis_voice_name property of the SpeechConfig object to the desired voice name.*
+      - Specify a filename in the AudioConfig object.
+  - title: "What two core capabilities does the Azure Speech MCP server expose to agents?"
+    options:
+      - Language translation and text summarization.
+      - Speech-to-text recognition and text-to-speech synthesis.*
+      - Named entity recognition and sentiment analysis.
+  - title: "Why does the Azure Speech MCP server require an Azure Storage account?"
+    options:
+      - To store the agent's instructions and configuration settings.
+      - To store input audio files and output audio files generated by the speech tools.*
+      - To cache the MCP server's tool definitions for faster discovery.
+  - title: "What credentials are needed when connecting the Azure Speech MCP server to a Foundry agent?"
+    options:
+      - An OAuth 2.0 token and a managed identity endpoint URL.
+      - A Foundry resource key and a SAS URL for a blob container.*
+      - A client certificate and the Azure subscription ID.
+  - title: "How can you specify a particular voice when using the text-to-speech tool through the agent?"
+    options:
+      - By configuring the voice in the MCP server settings before connecting.
+      - By including the voice name in your natural language prompt to the agent.*
+      - By setting an environment variable in the client application code.
+  - title: "What are the two authentication methods supported by the Voice Live API?"
+    options:
+      - OAuth 2.0 and JWT (JSON Web Tokens)
+      - Basic authentication and API keys
+      - Microsoft Entra (keyless) and API key*
+  - title: "Which protocol is used for avatar streaming integration in Voice Live API?"
+    options:
+      - HTTP/2
+      - WebRTC*
+      - gRPC
+  - title: "How do you configure and test Voice Live agent integration in the Foundry Portal?"
+    options:
+      - You can't - Voice Live is only accessible through the REST API or Python SDK.
+      - In the Azure Speech in Foundry Tools Voice Live playground*
+      - Enable Voice mode in the agent playground*
+  - title: "How can you stop audio playback when a user interrupts the voice agent?"
+    options:
+      - You can't - the user must wait for the agent to finish.
+      - Handle the ServerEventType.INPUT_AUDIO_BUFFER_SPEECH_STARTED event*
+      - Reset the Voice Live session and clear the conversation history
+  - title: "What function of an Azure Translator TextTranslationClient object should you use to convert the Chinese word \"你好\" to the English word \"Hello\"?"
+    options:
+      - get_supported_language
+      - translate*
+      - transliterate
+  - title: "What function of an Azure Translator TextTranslationClient object should you use to convert the Russian word \"спасибо\" in Cyrillic characters to \"spasibo\" in Latin characters?"
+    options:
+      - get_supported_language
+      - translate
+      - transliterate*
+  - title: "Which Azure Speech SDK object should you use to specify the language(s) into which you want speech translated?"
+    options:
+      - SpeechConfig
+      - SpeechTranslationConfig*
+      - AudioConfig
+  - title: "Which kind of model can you use to respond to visual input?"
+    options:
+      - Only OpenAI GPT models
+      - Embedding models
+      - Multimodal models*
+  - title: "How can you submit a prompt that asks a model to analyze an image?"
+    options:
+      - Submit one prompt with an image-based message followed by another prompt with a text-based message.
+      - Submit a prompt that contains a multi-part user message, containing both text content and image content.*
+      - Submit the image as the system message and the instruction or question as the user message.
+  - title: "How can you include an image in a message?"
+    options:
+      - As a URL or as binary data*
+      - Only as a URL
+      - Only as binary data
+  - title: "You want to find a model in Microsoft Foundry to generate images. Which inference task should you filter by?"
+    options:
+      - Text to image*
+      - Image to text
+      - Embeddings
+  - title: "Which OpenAI API can you use with image-generation models?"
+    options:
+      - Video
+      - Image*
+      - Graphics
+  - title: "What video durations does Sora 2 support?"
+    options:
+      - 1 to 20 seconds in 1-second increments
+      - 4, 8, or 12 seconds*
+      - Any duration up to 60 seconds
+  - title: "What is required when using a reference image with Sora 2?"
+    options:
+      - The image must be smaller than 1 MB
+      - The image resolution must match the target video size*
+      - The image must contain at least one human face
+  - title: "What is the remix feature used for in Sora 2?"
+    options:
+      - Combining multiple videos into one
+      - Making targeted adjustments to an existing video without regenerating from scratch*
+      - Adding background music to generated videos
+  - title: "What is the purpose of grounding in Content Understanding?"
+    options:
+      - To connect Content Understanding to Azure storage
+      - To identify the specific regions in content where each value was extracted*
+      - To filter out harmful content from images
+  - title: "What does a confidence score of 0.95 indicate for an extracted field?"
+    options:
+      - The extraction failed and needs manual review
+      - The value can be trusted for automated processing*
+      - The field was classified rather than extracted
+  - title: Which prebuilt analyzer would you use to extract vendor names and item totals from a purchase receipt?"
+    options:
+      - prebuilt-image
+      - prebuilt-invoice
+      - prebuilt-receipt*
+  - title: "What kinds of AI solution is Azure Content Understanding designed to help you build?"
+    options:
+      - Chatbots that automatically translate between multiple spoken and written languages.
+      - Analyzers that extract information from documents, images, videos, and audio files.*
+      - Image generators that create visualizations based on descriptions.
+  - title: "Which graphical tool should you use to create an Azure Content Understanding project?"
+    options:
+      - Microsoft Visual Studio.
+      - Azure Machine Learning studio.
+      - Content Understanding Studio.*
+  - title: "What should you define for the information you want to extract from content?"
+    options:
+      - A schema.*
+      - An index.
+      - A cluster.
+  - title: "What configuration values are needed to use the Azure Content Understanding API?"
+    options:
+      - The name of the resource group where the Azure service is deployed.
+      - The Azure subscription ID and tenant ID.
+      - The endpoint and key for the Foundry resource.*
+  - title: "What must be specified when calling the analyze method to extract fields from content?"
+    options:
+      - The name of the Foundry resource.
+      - The name of the analyzer.*
+      - The Operation-Location returned when the analyzer was created.
+  - title: "How are the extracted fields returned?"
+    options:
+      - As type-specific values.*
+      - As a list of strings.
+      - As a single blob.
+  - title: "You need to extract text and table structure from a set of documents that have varying formats. You don't need to identify specific labeled fields. Which Document Intelligence model should you use?"
+    options:
+      - The read model.
+      - The layout model.*
+      - The invoice model.
+  - title: "You're building a custom model in Azure Document Intelligence. What training artifacts are required when training with the REST API?"
+    options:
+      - Only the sample form documents in a blob container.
+      - Sample forms along with ocr.json, labels.json, and fields.json files in a blob container.*
+      - A minimum of 100 labeled forms and a trained classifier.
+  - title: "A company processes both invoices and receipts. They want a single endpoint that routes each document to the correct extraction model. What should they use?"
+    options:
+      - A custom neural model. 
+      - A prebuilt read model.
+      - A composed model or a custom classifier paired with extraction models.*
+  - title: "Which component of an Azure AI Search solution is scheduled to extract and enrich data to populate an index?   "
+    options:
+      - Indexer*
+      - Projection
+      - Query
+  - title: "Which service supports built-in AI skills in Azure AI Search?"
+    options:
+      - Azure Functions
+      - Foundry Tools*
+      - Azure Cosmos DB
+  - title: "Which kind of projection results in a relational data schema for extracted fields?"
+    options:
+      - File 
+      - Object
+      - Table*
